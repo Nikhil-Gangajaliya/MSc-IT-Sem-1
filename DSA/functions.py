@@ -137,3 +137,135 @@
 
 # numbers = list(map(int, input("Enter numbers: ").split()))
 # print("Largest =", largest(numbers))
+
+# print("\n17. Write a function to remove duplicate element from a list\n")
+# def remove_duplicates(numbers):
+#     new_list = []
+
+#     for num in numbers:
+#         if num not in new_list:
+#             new_list.append(num)
+
+#     return new_list
+
+# numbers = [1, 2, 3, 4, 5, 11, 22, 33, 4, 5, 2, 1, 66, 22, 11, 44, 5, 1, 2, 3, 4, 5]
+# print(remove_duplicates(numbers))
+
+# print("\n18. Write a function to count how many times an element appears in a list\n")
+# def count_element(numbers, element):
+#     count = 0
+
+#     for num in numbers:
+#         if num == element:
+#             count += 1
+
+#     return count
+
+# numbers = [10, 20, 10, 30, 20, 10, 40, 10, 20 ,30, 50, 60]
+# print("List: ", numbers)
+# element = int(input("Enter the element to count: "))
+# print("Count =", count_element(numbers, element))
+
+# print("\n19. Write a function to check whether a number is prime\n")
+# def is_prime(num):
+#     if num < 2:
+#         return False
+
+#     for i in range(2, num):
+#         if num % i == 0:
+#             return False
+
+#     return True
+
+# num = int(input("Enter a number: "))
+# if is_prime(num):
+#     print("Prime number")
+# else:
+#     print("Not a prime number")
+
+# print("\n20. Write a function to return all prime numbers between two numbers\n")
+# def is_prime(num):
+#     if num < 2:
+#         return False
+
+#     for i in range(2, num):
+#         if num % i == 0:
+#             return False
+
+#     return True
+
+# def prime_numbers(start, end):
+#     primes = []
+
+#     for num in range(start, end + 1):
+#         if is_prime(num):
+#             primes.append(num)
+
+#     return primes
+
+# start = int(input("Enter starting number: "))
+# end = int(input("Enter ending number: "))
+# print("Prime numbers:", prime_numbers(start, end))
+
+# print("\n21. Write a function to calculate Fibonacci numbers\n")
+# def fibonacci(n):
+#     a = 0
+#     b = 1
+
+#     for i in range(n):
+#         print(a, end=" ")
+#         a, b = b, a + b
+
+
+# n = int(input("Enter number of terms: "))
+
+# fibonacci(n)
+
+# print("\n22. Write a function to find second-largest number in a list\n")
+# def second_largest(numbers):
+#     largest = numbers[0]
+#     second = numbers[0]
+
+#     for num in numbers:
+#         if num > largest:
+#             second = largest
+#             largest = num
+#         elif num > second and num != largest:
+#             second = num
+
+#     return second
+
+# numbers = [10, 25, 30, 15, 40, 35]
+# print("List:", numbers)
+# print("Second largest =", second_largest(numbers))
+
+# print("\n23. Write a function to sort a list without using sort()\n")
+# def sort_list(numbers):
+#     for i in range(len(numbers)):
+#         for j in range(len(numbers) - 1):
+#             if numbers[j] > numbers[j + 1]:
+#                 numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]
+
+#     return numbers
+
+
+# numbers = [40, 10, 30, 20, 50]
+# print("Original list:", numbers)
+# print("Sorted list:", sort_list(numbers))
+
+print("\n24. Write a function to merge two list and remove duplicates\n")
+def merge_lists(list1, list2):
+    new_list = []
+
+    for num in list1 + list2:
+        if num not in new_list:
+            new_list.append(num)
+
+    return new_list
+
+
+list1 = [10, 20, 30, 40]
+list2 = [30, 40, 50, 60]
+print("List 1:", list1)
+print("List 2:", list2)
+print("Merged list:", merge_lists(list1, list2))
