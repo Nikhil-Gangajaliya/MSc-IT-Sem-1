@@ -253,19 +253,19 @@
 # print("Original list:", numbers)
 # print("Sorted list:", sort_list(numbers))
 
-print("\n24. Write a function to merge two list and remove duplicates\n")
-def merge_lists(list1, list2):
-    new_list = []
+# print("\n24. Write a function to merge two list and remove duplicates\n")
+# def merge_lists(list1, list2):
+#     new_list = []
 
-    for num in list1 + list2:
-        if num not in new_list:
-            new_list.append(num)
+#     for num in list1 + list2:
+#         if num not in new_list:
+#             new_list.append(num)
 
-    return new_list
+#     return new_list
 
 
-list1 = [10, 20, 30, 40]
-list2 = [30, 40, 50, 60]
-print("List 1:", list1)
-print("List 2:", list2)
-print("Merged list:", merge_lists(list1, list2))
+# list1 = [10, 20, 30, 40]
+# list2 = [30, 40, 50, 60]
+# print("List 1:", list1)
+# print("List 2:", list2)
+# print("Merged list:", merge_lists(list1, list2))
